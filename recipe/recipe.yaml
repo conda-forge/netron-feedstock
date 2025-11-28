@@ -1,6 +1,6 @@
 context:
   name: netron
-  version: "8.7.5"
+  version: "8.7.6"
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/lutzroeder/netron/archive/refs/tags/v${{ version }}.tar.gz
-  sha256: 68C2D6317FBD0727D57C672171A389C978A2819C3D8E6ECC356DD5FE40E6BB3E
+  sha256: 2bc2918832725903c2c0cf42cccd81801f30437a6c9023546c798b9b78af835f
 
 build:
   noarch: python
@@ -19,8 +19,8 @@ build:
     - python -m pip install -vv dist/pypi/netron-${{ version }}.tar.gz
   number: 0
   python:
-      entry_points:
-        - netron = netron:main
+    entry_points:
+      - netron = netron:main
 
 requirements:
   host:
@@ -35,7 +35,7 @@ requirements:
 tests:
   - python:
       imports:
-      - netron
+        - netron
       pip_check: true
       python_version: ${{ python_min }}.*
   - script:
