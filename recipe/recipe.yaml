@@ -1,6 +1,6 @@
 context:
   name: netron
-  version: "8.7.6"
+  version: "8.7.7"
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/lutzroeder/netron/archive/refs/tags/v${{ version }}.tar.gz
-  sha256: 2bc2918832725903c2c0cf42cccd81801f30437a6c9023546c798b9b78af835f
+  sha256: 4a02a79be12b4dfd5017bb3e4ab071014529cbab3b5a4211ee8a1f7e15cfa2ec
 
 build:
   noarch: python
